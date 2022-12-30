@@ -41,7 +41,6 @@ export class App extends Component{
     this.setState({filter: event.target.value});
   }
 
-
   handleDeleteContact = uniqueId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== uniqueId)
@@ -51,8 +50,8 @@ export class App extends Component{
   filterContacts = () => {
     const { contacts, filter } = this.state;
     const lowerCaseFilter = filter.toLowerCase();
-    return contacts.filter(contact=>
-      contact.name.toLowerCase().includes(lowerCaseFilter))
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(lowerCaseFilter));
   }
 
 
