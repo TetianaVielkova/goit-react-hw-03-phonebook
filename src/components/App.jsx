@@ -58,11 +58,11 @@ export class App extends Component{
 
 
   render() {
-    const { filter} = this.state;
+    const {contacts, filter} = this.state;
     return(
       <Container>
         <Title>Phonebook</Title>
-        <ContactForm addContact={this.handleAddContact}/>
+        <ContactForm contacts={contacts} addContact={this.handleAddContact}/>
         <SubTitle>Contacts</SubTitle>
         <Filter value={filter} onChange={this.handelFilterContact}/>
         <ContactList contacts={this.filterContacts()} onDeleteContact={this.handleDeleteContact}/> 
